@@ -1,0 +1,496 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "header";
+@import "main";
+
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    font-size: 10px;
+}
+body
+{
+    min-width: 320px;
+    margin:0;
+    font-family: $primary-font-family;
+    font-style: normal;
+    scroll-behaviour: smooth;
+}
+img
+{
+    display: block;
+    margin: auto;
+}
+//clase para hacer desaparecer el ul del header
+.not-display
+{
+    display: none;
+}
+//percentage scroller
+#percentage-scroller
+{
+    height: 5px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+//clase del popup
+.popup
+{
+    padding:10px;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    div
+    {
+        position: relative;
+        top: 30%;
+        margin:auto;
+        width: 100%;
+        background-color: $primary-color;
+        text-align: center;
+        padding: 20px;
+        color:white;
+        border:5px dotted white;
+    }
+    button
+    {
+        width: 30px;
+        height: 30px;
+        color:white;
+        background: $primary-color;
+        border:none;
+        font-size: 2rem;
+        position: absolute;
+        right:10px;
+        top:10px;
+        cursor: pointer;
+    }
+    button:hover
+    {
+        color:black;
+    }
+    p
+    {
+        font-size:3rem;
+        padding:1rem;
+        font-weight: 800;
+    }
+    label
+    {
+        font-size: 2rem;
+    }
+    input
+    {
+        display: block;
+        width: 80%;
+        margin:auto;
+        padding:1rem;
+        border-radius: 30px;
+        border:none;
+        border-bottom:1px solid white;
+        
+    }
+    input[type=submit]
+    {
+        background-color: $primary-color;
+        color:white;
+        margin-top:20px;
+        border:1px solid white;
+        width: 50%;
+    }
+}
+.first-section  
+{
+    background: #F7F7F7;
+    padding: 42px 30px 44.66px 30px;
+    p:nth-of-type(1)
+    {
+       @include article-p(font-family, $secondary-font-family, font-size, 3rem, line-height, 35px, margin-top, 0px);
+    }
+    p.first-section__p-2
+    {
+        @include article-p(font-family, $primary-font-family, font-size, 1.4rem, line-height, 21px, margin-top, 18px);
+       
+        /*margin-right: 94px;*/
+    }
+    article:nth-of-type(1)
+    {
+        //el valor de margin-top es 0 ya que existe un padding-top del padre
+        @include article-container(padding-top, 174px, 0px);
+        img:nth-of-type(1)
+        {
+            /*nose q max-width ponerle*/
+            max-width: 192.76px;
+            @include article-images(left, 55.27px, top, 37.11px, width, 61.38%);
+        }
+        p:nth-of-type(2)
+        {
+            margin-top: 42px;            
+            /*margin-right: 94px;*/
+        }
+    }
+    article:nth-of-type(2)
+    {
+        @include article-container(padding-top, 180px);
+        .first-section__figure
+        {
+            @include  article-div(width, 131.88px, height, 131.88px, left, 90px, top, 12px, border-radius, 50%, background, #08A6E4);
+        }
+        img
+        {
+            @include article-images(left, 90px, top, 19px, width, 55.55%);
+            max-width: 175px;
+        }
+    }
+    article:nth-of-type(3)
+    {
+       @include article-container(padding-top, 31px, 42px, 0px);
+        
+        p.first-section__p-2
+        {
+            margin-top:20.33px;
+            /*margin-right: 94px;*/
+        }
+        div.first-section__row-2
+        {
+            margin-top:16.67px;
+            height: 195px;
+            background: #55DFB4;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+            //es la unica imagen de  los article que aparece dentro del div
+            img
+            {
+                @include article-images(left, -11.69px, top, 24.64px, width, 93.86%);
+                position: relative;
+                max-width:  295.73px;
+            }
+        }
+    }
+}
+
+
+.second-section
+{
+    padding: 53px 18px  ;
+    text-align:center;
+    > span
+    {
+        @include text-features(font-family, $secondary-font-family, font-size, 3.6rem, line-height, 42px, font-weight, 400);
+    }
+    select
+    {
+        display: block;
+        margin:auto;
+        margin-top: 10px;
+        border-radius: 20px;
+        padding: 10px;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+    }
+    article
+    {
+        //añado pos relative para no hacer las 2 columnas de los divs con display flex
+        position: relative;
+        margin-top:54px;
+        max-width: 380px;
+        margin-right:auto;
+        margin-left:auto;
+        > div:nth-of-type(1)
+        {
+            @include pricing-articles-div(left, 0);
+        }
+        > div:nth-of-type(2)
+        {
+            @include pricing-articles-div(left, 50%);
+            text-align: justify;
+        }
+    }
+    article:nth-of-type(1)
+    {
+        margin-top:14px;
+        @include pricing-articles();
+
+        button
+        {
+            @include pricing-button(background, #EB476E, top,226px);
+        }
+    }
+    article:nth-of-type(2)
+    {
+        @include pricing-articles(#07ACE6);
+        box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+        button
+        {
+            @include pricing-button(background, #07ACE6, top,226px);
+        }
+    }
+    article:nth-of-type(3)
+    {
+        @include pricing-articles(#55DFB4);
+        button
+        {
+            @include pricing-button(background, #55DFB4 , top,226px);
+        }
+    }
+}
+
+section:nth-of-type(3)
+{
+    padding:0px 33px 44px 30px;
+    > div
+    {
+        p:nth-of-type(1)
+        {
+            @include text-features(font-family, $secondary-font-family, font-size, 4rem, line-height, 47px, font-weight, 400);
+            margin-bottom: 5px
+        }
+        p:nth-of-type(2)
+        {
+            @include text-features(font-family, $primary-font-family, font-size, 1.6rem, line-height, 22px, font-weight, 400);
+        }
+    }
+    
+    ul
+    {
+        list-style-type: none;
+        list-style-position: inside;
+        margin-top:38px;
+        li
+        {
+            list-style-image: url("../images/email.svg");
+            @include text-features(font-family, $primary-font-family, font-size, 1.6rem, line-height, 22px, font-weight, 600, #A5A5A5);
+            //para centrar texto con la foto verticalmente
+        }
+        li:nth-of-type(1)
+        {
+            list-style-image: url("../images/email.svg");
+            margin-bottom: 17px;
+        }
+        li:nth-of-type(2)
+        {
+            list-style-image: url("../images/phone.svg");
+        }
+    }
+    form
+    {
+        //deberia  ser 56px
+        margin-top:30px;
+        input
+        {
+            display: block;
+            width: 100%;
+            border:none;
+            border-bottom:1px solid #95989A;
+            padding:7px;
+        }
+        input[type=checkbox]
+        {
+           //para hacer el checkbox más grande
+            zoom:1.5;
+            border-radius: 4px;
+            /*-webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: 1px solid #95989A;*/
+        }
+        label
+        {
+            @include text-features(font-family, $primary-font-family, font-size, 1.1rem, line-height, 15px, font-weight, 600, $primary-color);
+            letter-spacing: 3.28px;
+            display: inline-block;
+        }
+        label:nth-of-type(2)
+        {
+            margin-top:42px;
+        }
+        > div
+        {
+            margin-top:31px;
+            position: relative;
+            height:170px;
+        }
+        input[type=submit]
+        {
+            background: #08A6E4;
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+            border-radius: 35px;
+            width:226px;
+            height: 57px;
+            @include text-features(font-family, $primary-font-family, font-size, 1.3rem, line-height, 18px, font-weight, 700, #FFFFFF);
+            position: absolute;
+            top:120px;
+            right:0px;
+        }
+    }
+}
+
+footer
+{
+    position: relative;
+    height: 89px;
+    background: #F7F7F7;
+    box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+    div
+    {
+        span
+        {
+            position: absolute;
+            left:17px;
+        }
+        span:first-child
+        {
+            @include text-features(font-family, $primary-font-family, font-size, 2.6rem, line-height, 30px, font-weight, 300, $primary-color);
+            top:22.48px;
+        }
+        span:nth-child(2)
+        {
+            @include text-features(font-family, $primary-font-family, font-size, 1.1rem, line-height, 15px, font-weight, 400, #A5A5A5);
+            top:53px;
+        }
+    }
+    div
+    {
+        img
+        {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 33px;
+        }
+        img:nth-of-type(1)
+        {
+            right:74px;
+        }
+        img:nth-of-type(2)
+        {
+            right:32px;
+        }
+    }
+    
+}
+
+//BEM
+.pricing-article__first-span{
+    @include pricing-article-text;
+    @include text-features(font-family, $secondary-font-family, font-size, 2rem, line-height, 24px, font-weight, 700);
+}
+.pricing-article__second-span
+{ 
+    @include text-features(font-family, $primary-font-family, font-size, 4.6rem, line-height, 64px, font-weight, 300);
+}
+.pricing-article__third-span{
+    @include pricing-article-text;
+    @include text-features(font-family, $secondary-font-family, font-size, 1.2rem, line-height, 14px, font-weight, 700);
+}
+.pricing-article__button-span{
+    @include text-features(font-family, $primary-font-family, font-size, 1.3rem, line-height, 18px, font-weight, 700);
+    color:#FFFFFF;
+}
+.pricing-article__second-span--red{
+    @include pricing-article-text(#FB3B64);
+}
+.pricing-article__second-span--blue{
+    @include pricing-article-text(#07ACE6); 
+}
+.pricing-article__second-span--green{
+    @include pricing-article-text(#55DFB4);
+}
+
+.pricing-article__list{
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url("../images/tick.svg");  
+}
+.pricing-article__list-item{
+    margin-top:20px;
+    @include text-features(font-family, $primary-font-family, font-size, 1.4rem, line-height, 19px, font-weight, 400);
+}
+.pricing-article__list-item--first{
+    margin-top:25px;
+}
+.pricing-article__list-1{
+    .pricing-article__list-item:nth-of-type(4),.pricing-article__list-item:nth-of-type(5){
+        list-style-image: url("../images/x.svg");  
+    }
+}
+.pricing-article__list-2{
+    .pricing-article__list-item:nth-of-type(5){
+        list-style-image: url("../images/x.svg");  
+    }
+}
+
+.third-section__span
+{
+    position: relative;    
+}
+.third-section__span--email
+{
+    top:-4px;
+}
+.third-section__span--phone
+{
+    top:-7px;
+}
+.third-section__first-column
+{
+    position: absolute;
+    left:0;
+    width: auto;
+}
+.third-section__second-column
+{
+    position: absolute;
+    left:30px;
+}
+.first-section__figure
+{
+    /*Debería ser left = 143.68 pero no aparece igual que en el diseño*/
+    @include article-div(width, 90.12px, height, 90.12px, left, 160px, top, 15px, border-radius, 41px, background, #FB3B64);
+    transform: rotate(-45deg);
+}
+//media queries
+/*
+@media screen and (min-width: 376px) and (max-width: 499px)
+{
+    $screen : var(--screen-width);
+    $percentage : calcularDiferenciaPorcentaje($screen);
+    html{
+        width: var(--screen-width);
+    }
+    .first-section
+    {
+        article:nth-of-type(1)
+        {
+            padding-top: calcularPorcentaje($percentage, 174) * 1px;
+            div
+            {
+                width: calcularPorcentaje(75, 90.12) * 1px;
+                height: calcularPorcentaje(75, 90.12) * 1px;
+                left: calcularPorcentaje(75, 160) * 1px;
+                top: calcularPorcentaje(75, 15) * 1px;
+            }
+            img:nth-of-type(1)
+            {
+                max-width: calcularPorcentaje(75, 192.76) * 1px;
+                left: calcularPorcentaje(75, 55.27) * 1px;
+                top: calcularPorcentaje(75, 37.11) * 1px;
+            }
+        }
+    }
+}*/
+@import "media-queries";
+
+
+

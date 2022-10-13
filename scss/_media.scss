@@ -1,0 +1,156 @@
+@media screen and (min-width: 425px){
+    .first-section
+    {
+        article:nth-of-type(1)
+        {
+            padding-top: calcularPorcentaje(88.23, 174) * 1px;
+            div
+            {
+                width: calcularPorcentaje(88.23, 90.12) * 1px;
+                height: calcularPorcentaje(88.23, 90.12) * 1px;
+                left: calcularPorcentaje(88.23, 160) * 1px;
+                top: calcularPorcentaje(88.23, 15) * 1px;
+            }
+            img:nth-of-type(1)
+            {
+                max-width: calcularPorcentaje(88.23, 192.76) * 1px;
+                left: calcularPorcentaje(88.23, 55.27) * 1px;
+                top: calcularPorcentaje(88.23, 37.11) * 1px;
+            }
+        }
+        article:nth-of-type(2)
+        {
+            padding-top: calcularPorcentaje(88.23, 180) * 1px;
+            div
+            {
+                width: calcularPorcentaje(88.23, 131.88) * 1px;
+                height: calcularPorcentaje(88.23, 131.88) * 1px;
+                left: calcularPorcentaje(88.23, 90) * 1px;
+                top: calcularPorcentaje(88.23, 12) * 1px;
+            }
+            img
+            {
+                max-width: calcularPorcentaje(88.23, 175) * 1px;
+                left: calcularPorcentaje(88.23, 90) * 1px;
+                top: calcularPorcentaje(88.23, 19) * 1px;
+            }
+        }
+        article:nth-of-type(3)
+        {
+            div
+            {
+                margin-top:16.67px;
+                height: calcularPorcentaje(88.23, 195) * 1px;
+                background: #55DFB4;
+                border: 1px solid #E8E9ED;
+                border-radius: 5px;
+                //es la unica imagen de  los article que aparece dentro del div
+                img
+                {
+                    left: calcularPorcentaje(88.23, -11.69) * 1px;
+                    top: calcularPorcentaje(88.23, 24.64) * 1px;
+                    max-width: calcularPorcentaje(88.23, 295.73) * 1px;;
+                }
+            }
+        }
+    }
+
+    section:nth-of-type(3) form input[type=submit]
+    {
+        margin-left: calcularPorcentaje(88.23,116) * 1px;
+    }
+
+    footer
+    {
+        span
+        {
+            left:calcularPorcentaje(88.23,17) * 1px;
+        }
+        img:nth-of-type(1)
+        {
+            left:calcularPorcentaje(88.23,277) * 1px;
+        }
+        img:nth-of-type(2)
+        {
+            left:calcularPorcentaje(88.23,321) * 1px;
+        }
+    }
+}
+@media screen and (min-width: 500px){
+    .first-section
+    {
+        article:nth-of-type(1)
+        {
+            padding-top: calcularPorcentaje(75, 174) * 1px;
+            div
+            {
+                width: calcularPorcentaje(75, 90.12) * 1px;
+                height: calcularPorcentaje(75, 90.12) * 1px;
+                left: calcularPorcentaje(75, 160) * 1px;
+                top: calcularPorcentaje(75, 15) * 1px;
+            }
+            img:nth-of-type(1)
+            {
+                max-width: calcularPorcentaje(75, 192.76) * 1px;
+                left: calcularPorcentaje(75, 55.27) * 1px;
+                top: calcularPorcentaje(75, 37.11) * 1px;
+            }
+        }
+        article:nth-of-type(2)
+        {
+            padding-top: calcularPorcentaje(75, 180) * 1px;
+            div
+            {
+                width: calcularPorcentaje(75, 131.88) * 1px;
+                height: calcularPorcentaje(75, 131.88) * 1px;
+                left: calcularPorcentaje(75, 90) * 1px;
+                top: calcularPorcentaje(75, 12) * 1px;
+            }
+            img
+            {
+                max-width: calcularPorcentaje(75, 175) * 1px;
+                left: calcularPorcentaje(75, 90) * 1px;
+                top: calcularPorcentaje(75, 19) * 1px;
+            }
+        }
+        article:nth-of-type(3)
+        {
+            div
+            {
+                margin-top:16.67px;
+                height: calcularPorcentaje(75, 195) * 1px;
+                background: #55DFB4;
+                border: 1px solid #E8E9ED;
+                border-radius: 5px;
+                //es la unica imagen de  los article que aparece dentro del div
+                img
+                {
+                    left: calcularPorcentaje(75, -11.69) * 1px;
+                    top: calcularPorcentaje(75, 24.64) * 1px;
+                    max-width: calcularPorcentaje(75, 295.73) * 1px;;
+                }
+            }
+        }
+    }
+
+    section:nth-of-type(3) form input[type=submit]
+    {
+        margin-left: calcularPorcentaje(75,116) * 1px;
+    }
+
+    footer
+    {
+        span
+        {
+            left:calcularPorcentaje(75,17) * 1px;
+        }
+        img:nth-of-type(1)
+        {
+            left:calcularPorcentaje(75,277) * 1px;
+        }
+        img:nth-of-type(2)
+        {
+            left:calcularPorcentaje(75,321) * 1px;
+        }
+    }
+}

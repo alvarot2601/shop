@@ -1,0 +1,16 @@
+//calcula el resultado del nuevo porcentaje. Se usa para darle valores a tamaños, paddings...
+@function calcularPorcentaje($percentage, $value){
+	$result : (100 * $value) / $percentage;
+	//$result2 : calc(100vw - 2px);
+	@return $result;
+}
+@function calcularPorcentaje2($percentage, $value){
+	$result : ($percentage*$value) / 100;
+	//$result2 : calc(100vw - 2px);
+	@return $result;
+}
+@function calcularDiferenciaPorcentaje($screen-width){
+	//$new-screen-width: var(--screen-width);
+	$percentage: (375 * 100) / $screen-width;
+	@return $percentage;
+}
